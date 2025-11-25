@@ -1,0 +1,20 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/services/Hero";
+import LogoCloud from "../components/shared/LogoCloud";
+import Activities from "../components/services/Activities";
+import Stats from "../components/services/Stats";
+import Equipment from "../components/services/Equipment";
+import FAQ from "../components/services/FAQ";
+import CTA from "../components/shared/CTA";
+---
+
+<Layout title="Diensten - YMH Infra">
+    <Hero />
+    <LogoCloud bgClass="bg-white" />
+    <Activities />
+    <Stats />
+    <Equipment />
+    <FAQ client:load />
+    <CTA />
+</Layout>

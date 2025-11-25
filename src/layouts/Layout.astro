@@ -1,0 +1,28 @@
+---
+import "../styles/global.css";
+import Footer from "../components/layouts/Footer";
+import Header from "../components/layouts/Header";
+
+interface Props {
+    title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="nl">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="YMH Infra" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+        <title>{title}</title>
+    </head>
+    <body class="font-sans antialiased">
+        <Header client:load />
+        <slot />
+        <Footer />
+    </body>
+</html>
